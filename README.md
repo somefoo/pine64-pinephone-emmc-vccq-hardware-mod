@@ -2,9 +2,9 @@
 
 
 # pine64-pinephone-emmc-vccq-hardware-mod
-A small repository containing the files needed to make PostmarketOS images bootable after performing the VCCQ hardware mod.
+A small repository containing the files needed to make PostmarketOS images bootable after performing the Vccq hardware mod.
 
-If you performed the VCCQ Hardware mod (to increase the eMMC performance) you need to also change your device tree to make the Pinephone bootable again (both on SD and eMMC).
+If you performed the Vccq Hardware mod (to increase the eMMC performance) you need to also change your device tree to make the Pinephone bootable again (both on SD and eMMC).
 
 If you performed the mod before creating a bootable media, you can simply generated the required files and place them in the boot/ directory of your installation.
 
