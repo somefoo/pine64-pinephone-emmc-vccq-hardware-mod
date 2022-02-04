@@ -37,12 +37,21 @@
   regulator-min-microvolt = <750000>;
 };
 
-// Overclock the GPU to 530mhz
+// Overclock the GPU to 550mhz
 &mali {
-  assigned-clock-rates = <530000000>;
+  assigned-clock-rates = <550000000>;
 };
 
 &cpu0_opp_table {
+
+    // New low power state
+    opp-492000000 {
+      opp-hz = /bits/ 64 <492000000>;
+      opp-microvolt = <870000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+
     // New low power state
     opp-552000000 {
       opp-hz = /bits/ 64 <552000000>;
