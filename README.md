@@ -1,4 +1,4 @@
-**Files used in this repository are based on the ones from the PostmarketOS project, originally created by Federico Amedeo Izzo.**
+**Files used in this repository are based on the ones from the PostmarketOS project, originally created by Federico Amedeo Izzo. Here is a link to his great blog post: [Link](https://izzo.pro/pinephone-vccq-mod/)**
 
 
 # pine64-pinephone-emmc-vccq-hardware-mod
