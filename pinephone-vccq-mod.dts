@@ -126,14 +126,14 @@
     // New mode at 1.248 ghz
     opp-1248000000 {
       opp-hz = /bits/ 64 <1248000000>;
-      opp-microvolt = <1260000>;
+      opp-microvolt = <1250000>;
       clock-latency-ns = <244144>; /* 8 32k periods */
     };
 
     // New mode at 1.296 ghz
     opp-1296000000 {
       opp-hz = /bits/ 64 <1296000000>;
-      opp-microvolt = <1270000>;
+      opp-microvolt = <1260000>;
       clock-latency-ns = <244144>; /* 8 32k periods */
     };
 
