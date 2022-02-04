@@ -21,3 +21,117 @@
 &pio {
 	vcc-pc-supply = <&reg_eldo1>;
 };
+
+
+
+
+// The following performs some overclocking + undervolting
+// to the CPU, and overclocking to the GPU. WARNING:
+// Use at your own risk, this works on my Pinephone
+// but may cause issues on yours (CPUs/GPUs don't overclock/
+// undervolt the same.
+// Author: Pit Henrich
+
+// Decrease the minimum voltage to 0.75v
+&reg_dcdc2 {
+  regulator-min-microvolt = <750000>;
+};
+
+// Overclock the GPU to 530mhz
+&mali {
+  assigned-clock-rates = <530000000>;
+};
+
+&cpu0_opp_table {
+    // New low power state
+    opp-552000000 {
+      opp-hz = /bits/ 64 <552000000>;
+      opp-microvolt = <900000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+    opp-648000000 {
+      opp-hz = /bits/ 64 <648000000>;
+      //opp-microvolt = <1040000>;
+      opp-microvolt = <1020000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+    opp-816000000 {
+      opp-hz = /bits/ 64 <816000000>;
+      //opp-microvolt = <1100000>;
+      opp-microvolt = <1040000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+    opp-912000000 {
+      opp-hz = /bits/ 64 <912000000>;
+      //opp-microvolt = <1120000>;
+      opp-microvolt = <1060000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+    opp-960000000 {
+      opp-hz = /bits/ 64 <960000000>;
+      //opp-microvolt = <1160000>;
+      opp-microvolt = <1080000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+    opp-1008000000 {
+      opp-hz = /bits/ 64 <1008000000>;
+      //opp-microvolt = <1200000>;
+      opp-microvolt = <1100000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+    opp-1056000000 {
+      opp-hz = /bits/ 64 <1056000000>;
+      //opp-microvolt = <1240000>;
+      opp-microvolt = <1120000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+    opp-1104000000 {
+      opp-hz = /bits/ 64 <1104000000>;
+      //opp-microvolt = <1260000>;
+      opp-microvolt = <1140000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+    opp-1152000000 {
+      opp-hz = /bits/ 64 <1152000000>;
+      //opp-microvolt = <1300000>;
+      opp-microvolt = <1170000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+    // New mode at 1.2 ghz
+    opp-1200000000 {
+      opp-hz = /bits/ 64 <1200000000>;
+      opp-microvolt = <1220000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+    
+    // New mode at 1.248 ghz
+    opp-1248000000 {
+      opp-hz = /bits/ 64 <1248000000>;
+      opp-microvolt = <1240000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+    // New mode at 1.296 ghz
+    opp-1296000000 {
+      opp-hz = /bits/ 64 <1296000000>;
+      opp-microvolt = <1260000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+
+    // New mode at 1.34 ghz
+    opp-1344000000 {
+      opp-hz = /bits/ 64 <1344000000>;
+      opp-microvolt = <1280000>;
+      clock-latency-ns = <244144>; /* 8 32k periods */
+    };
+};
