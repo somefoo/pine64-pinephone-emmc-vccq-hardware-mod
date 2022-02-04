@@ -37,9 +37,9 @@
   regulator-min-microvolt = <750000>;
 };
 
-// Overclock the GPU to 550mhz
+// Overclock the GPU to 530mhz
 &mali {
-  assigned-clock-rates = <550000000>;
+  assigned-clock-rates = <530000000>;
 };
 
 &cpu0_opp_table {
@@ -62,21 +62,21 @@
     opp-648000000 {
       opp-hz = /bits/ 64 <648000000>;
       //opp-microvolt = <1040000>;
-      opp-microvolt = <1020000>;
+      opp-microvolt = <940000>;
       clock-latency-ns = <244144>; /* 8 32k periods */
     };
 
     opp-816000000 {
       opp-hz = /bits/ 64 <816000000>;
       //opp-microvolt = <1100000>;
-      opp-microvolt = <1040000>;
+      opp-microvolt = <1000000>;
       clock-latency-ns = <244144>; /* 8 32k periods */
     };
 
     opp-912000000 {
       opp-hz = /bits/ 64 <912000000>;
       //opp-microvolt = <1120000>;
-      opp-microvolt = <1060000>;
+      opp-microvolt = <1040000>;
       clock-latency-ns = <244144>; /* 8 32k periods */
     };
 
@@ -118,7 +118,7 @@
     // New mode at 1.2 ghz
     opp-1200000000 {
       opp-hz = /bits/ 64 <1200000000>;
-      opp-microvolt = <1220000>;
+      opp-microvolt = <1230000>;
       clock-latency-ns = <244144>; /* 8 32k periods */
     };
 
@@ -126,14 +126,14 @@
     // New mode at 1.248 ghz
     opp-1248000000 {
       opp-hz = /bits/ 64 <1248000000>;
-      opp-microvolt = <1240000>;
+      opp-microvolt = <1260000>;
       clock-latency-ns = <244144>; /* 8 32k periods */
     };
 
     // New mode at 1.296 ghz
     opp-1296000000 {
       opp-hz = /bits/ 64 <1296000000>;
-      opp-microvolt = <1260000>;
+      opp-microvolt = <1270000>;
       clock-latency-ns = <244144>; /* 8 32k periods */
     };
 
