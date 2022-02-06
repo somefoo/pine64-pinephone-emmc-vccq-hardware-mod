@@ -37,11 +37,10 @@
   regulator-min-microvolt = <750000>;
 };
 
-// Disabled for now
-//// Overclock the GPU to 500mhz
-//&mali {
-//  assigned-clock-rates = <500000000>;
-//};
+// Overclock the GPU to 500mhz
+&mali {
+  assigned-clock-rates = <500000000>;
+};
 
 &cpu0_opp_table {
 
@@ -64,7 +63,7 @@
     opp-648000000 {
       opp-hz = /bits/ 64 <648000000>;
       //opp-microvolt = <1040000>;
-      opp-microvolt = <960000>;
+      opp-microvolt = <980000>;
       clock-latency-ns = <244144>; /* 8 32k periods */
     };
 
@@ -140,14 +139,6 @@
       opp-microvolt = <1260000>;
       clock-latency-ns = <244144>; /* 8 32k periods */
     };
-
-    // New mode at 1.34 ghz (1.28v - GPU@500MHz Stable)
-    opp-1344000000 {
-      opp-hz = /bits/ 64 <1344000000>;
-      opp-microvolt = <1280000>;
-      clock-latency-ns = <244144>; /* 8 32k periods */
-    };
-
 
 // Disabled due to high power consumption:
 //    // New mode at 1.34 ghz
