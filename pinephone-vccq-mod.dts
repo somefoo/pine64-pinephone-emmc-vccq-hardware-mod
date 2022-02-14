@@ -39,7 +39,7 @@
 
 // Overclock the GPU to 500mhz
 &mali {
-  assigned-clock-rates = <500000000>;
+  assigned-clock-rates = <547200000>;
 };
 
 &cpu0_opp_table {
